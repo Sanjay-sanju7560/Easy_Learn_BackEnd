@@ -31,8 +31,8 @@ exports.login = async (req,res)=>{
    console.log(existingUser)
    if(existingUser){
     // generate token using jwt 
-    const token = jwt.sign({userId:existingUser._id},process.env.jwt_secret)
-    res.status(200).json({existingUser ,token })
+    // const token = jwt.sign({userId:existingUser._id},process.env.jwt_secret)
+    res.status(200).json({existingUser/*  ,token  */})
    } else{
     res.status(406).json("Invalid Email / Password")
     }
